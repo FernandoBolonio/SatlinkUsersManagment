@@ -20,9 +20,6 @@ namespace SatlinkUsersManagment1.Services
 
         public async Task SaveUsers(List<User> users)
         {
-            //var usersToUpdate = await _context.Users.Where(x => users.Select(y => y.Id).Contains(x.Id)).ToListAsync();
-            //var usersToCreate = users.Where(x => !usersToUpdate.Select(y => y.Id).Contains(x.Id)).ToList();
-
             var usersToCreate = users.Where(x => !(_context.Users.Any(y => y.Id == x.Id))).ToList();
             var usersToUpdate = users.Except(usersToCreate);
 

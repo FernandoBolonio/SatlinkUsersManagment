@@ -1,4 +1,4 @@
-﻿namespace SatlinkUsersManagment1.Models
+﻿namespace SatlinkUsersManagment2.Models
 {
     public class User
     {
